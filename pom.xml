@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <groupId>com.example</groupId>
+    <artifactId>jrecord-playground</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <!-- Build properties -->
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+ 
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.JRecord</groupId>
+            <artifactId>JRecord</artifactId>
+            <version>0.93.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/JRecord.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.JRecordCodeGen</groupId>
+            <artifactId>JRecordCodeGen</artifactId>
+            <version>0.93.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/JRecordCodeGen.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>cb2xml</groupId>
+            <artifactId>cb2xml</artifactId>
+            <version>1.01.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/cb2xml.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.JRecord.cbl2csv</groupId>
+            <artifactId>Cobol2Csv</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/Cobol2Csv.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.JRecord.csvToCobol</groupId>
+            <artifactId>CsvToCobol</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/Csv2Cobol.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.JRecord</groupId>
+            <artifactId>jrecord</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/JRecord.jar</systemPath>
+        </dependency>
+       <!-- <dependency>
+            <groupId>net.sf.jrecord.jrecord-parent.jrecord-project-parent</groupId>
+            <artifactId>jrecord-common</artifactId>
+            <version>0.93</version>
+        </dependency>-->
+    </dependencies>
+ 
+</project>

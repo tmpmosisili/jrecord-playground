@@ -1,0 +1,74 @@
+@startuml
+class test.walker.Builder.GenerateCode.amsPo.example.AmspodownloadReadExample {
++ {static} void main(String[])
+- {static} void processPoRecord(Amspodownload.RecPoRecord)
+- {static} void processProductRecord(Amspodownload.RecProductRecord)
+- {static} void processLocationRecord(Amspodownload.RecLocationRecord)
+}
+class test.walker.Builder.GenerateCode.amsPo.data.Amspodownload {
+- {static} IoProvider<Amspodownload,IAmspodownloadChildren> provider
++ RecPoRecord poRecord
++ RecProductRecord productRecord
++ RecLocationRecord locationRecord
++ {static} IoProvider<Amspodownload,IAmspodownloadChildren> getIoProvider()
+}
+interface test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.IAmspodownloadChildren {
+}
+class test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecPoRecord {
+- byte[] cobolData
++ IStringField recordType
++ IDecimalField sequenceNumber
++ ILongField vendor
++ ILongField po
++ IIntField entryDate
++ IStringField beg01Code
++ IStringField beg02Code
++ IIntField department
++ IIntField expectedRecieptDate
++ IIntField cancelByDate
++ IStringField ediType
++ IIntField addDate
++ IStringField departmentName
++ IStringField prcoessType
++ IStringField orderType
++ byte[] getData()
++ void setData(byte[])
+}
+class test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecProductRecord {
+- byte[] cobolData
++ IStringField recordType
++ IDecimalField packQty
++ IDecimalField packCost
++ ILongField apn
++ IIntField product
++ IStringField pmgDtlTechKey
++ IStringField casePackId
++ IStringField productName
++ byte[] getData()
++ void setData(byte[])
+}
+class test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecLocationRecord {
+- byte[] cobolData
++ IStringField recordType
++ IArrayField1Dimension<IIntField> dcNumber
++ IArrayField1Dimension<IIntField> packQuantity
++ byte[] getData()
++ void setData(byte[])
+}
+class test.walker.Builder.GenerateCode.amsPo.example.AmspodownloadWriteExample {
++ {static} void main(String[])
+- {static} Amspodownload.RecPoRecord generatePoRecord(int)
+- {static} Amspodownload.RecProductRecord generateProductRecord(int)
+- {static} Amspodownload.RecLocationRecord generateLocationRecord(int)
+}
+
+
+test.walker.Builder.GenerateCode.amsPo.data.Amspodownload +.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.IAmspodownloadChildren
+test.walker.Builder.GenerateCode.amsPo.data.IGetByteData <|-- test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.IAmspodownloadChildren
+test.walker.Builder.GenerateCode.amsPo.data.Amspodownload +.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecPoRecord
+test.walker.Builder.GenerateCode.amsPo.data.IAmspodownloadChildren <|.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecPoRecord
+test.walker.Builder.GenerateCode.amsPo.data.Amspodownload +.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecProductRecord
+test.walker.Builder.GenerateCode.amsPo.data.IAmspodownloadChildren <|.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecProductRecord
+test.walker.Builder.GenerateCode.amsPo.data.Amspodownload +.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecLocationRecord
+test.walker.Builder.GenerateCode.amsPo.data.IAmspodownloadChildren <|.. test.walker.Builder.GenerateCode.amsPo.data.Amspodownload.RecLocationRecord
+@enduml
